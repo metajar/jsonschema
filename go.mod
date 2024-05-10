@@ -1,4 +1,4 @@
-module github.com/qri-io/jsonschema
+module github.com/metajar/jsonschema
 
 go 1.13
 
