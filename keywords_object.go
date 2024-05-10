@@ -83,6 +83,14 @@ func (p Properties) JSONChildren() (res map[string]JSONPather) {
 // Required defines the required JSON Schema keyword
 type Required []string
 
+func (r *Required) ToArray() []string {
+	a := make([]string, len(*r))
+	for _, v := range *r {
+		a = append(a, v)
+	}
+	return a
+}
+
 // NewRequired allocates a new Required keyword
 func NewRequired() Keyword {
 	return &Required{}
