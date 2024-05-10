@@ -84,7 +84,7 @@ func (p Properties) JSONChildren() (res map[string]JSONPather) {
 type Required []string
 
 func (r *Required) ToArray() []string {
-	a := make([]string, len(*r))
+	var a []string
 	for _, v := range *r {
 		a = append(a, v)
 	}
