@@ -29,7 +29,7 @@ type ValidationState struct {
 	Errs *[]KeyError
 }
 
-// NewValidationState creates a new ValidationState with the provided location pointers and data instance
+// NewValidationState creates a new ValidationState with the provided location pointers and Data instance
 func NewValidationState(s *Schema) *ValidationState {
 	tmpBRLprt := jptr.NewPointer()
 	tmpRLprt := jptr.NewPointer()

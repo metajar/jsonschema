@@ -54,7 +54,7 @@ func copyGlobalKeywordRegistry() *KeywordRegistry {
 	return kr.Copy()
 }
 
-// Copy creates a new KeywordRegistry populated with the same data.
+// Copy creates a new KeywordRegistry populated with the same Data.
 func (r *KeywordRegistry) Copy() *KeywordRegistry {
 	dest := &KeywordRegistry{
 		keywordRegistry:    make(map[string]KeyMaker, len(r.keywordRegistry)),
@@ -157,7 +157,7 @@ var MaxKeywordErrStringLen = 20
 // Keyword is an interface for anything that can validate.
 // JSON-Schema keywords are all examples of Keyword
 type Keyword interface {
-	// ValidateKeyword checks decoded JSON data and writes
+	// ValidateKeyword checks decoded JSON Data and writes
 	// validation errors (if any) to an outparam slice of KeyErrors
 	ValidateKeyword(ctx context.Context, currentState *ValidationState, data interface{})
 

@@ -135,8 +135,8 @@ var primitiveTypes = map[string]bool{
 	"integer": true,
 }
 
-// DataType attempts to parse the underlying data type
-// from the raw data interface
+// DataType attempts to parse the underlying Data type
+// from the raw Data interface
 func DataType(data interface{}) string {
 	if data == nil {
 		return "null"
@@ -166,7 +166,7 @@ func DataType(data interface{}) string {
 	}
 }
 
-// DataTypeWithHint attempts to parse the underlying data type
+// DataTypeWithHint attempts to parse the underlying Data type
 // by leveraging the schema expectations for better results
 func DataTypeWithHint(data interface{}, hint string) string {
 	dt := DataType(data)

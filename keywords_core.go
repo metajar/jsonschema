@@ -118,7 +118,7 @@ func (c *Comment) Resolve(pointer jptr.Pointer, uri string) *Schema {
 
 // Default defines the default JSON Schema keyword
 type Default struct {
-	data interface{}
+	Data interface{}
 }
 
 // NewDefault allocates a new Default keyword
@@ -146,7 +146,7 @@ func (d *Default) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	*d = Default{
-		data: defaultData,
+		Data: defaultData,
 	}
 	return nil
 }

@@ -519,7 +519,7 @@ type TestSet struct {
 
 type TestCase struct {
 	Description string      `json:"description"`
-	Data        interface{} `json:"data"`
+	Data        interface{} `json:"Data"`
 	Valid       bool        `json:"valid"`
 }
 
@@ -737,7 +737,7 @@ func BenchmarkAdditionalProperties(b *testing.B) {
 			}
 			d, err := json.Marshal(data)
 			if err != nil {
-				b.Errorf("unable to marshal data: %v", err)
+				b.Errorf("unable to marshal Data: %v", err)
 				return "", nil
 			}
 			return `{
@@ -757,7 +757,7 @@ func BenchmarkConst(b *testing.B) {
 			}
 			d, err := json.Marshal(data)
 			if err != nil {
-				b.Errorf("unable to marshal data: %v", err)
+				b.Errorf("unable to marshal Data: %v", err)
 				return "", nil
 			}
 			return `{
@@ -795,7 +795,7 @@ func BenchmarkDependencies(b *testing.B) {
 			}
 			d, err := json.Marshal(deps)
 			if err != nil {
-				b.Errorf("unable to marshal data: %v", err)
+				b.Errorf("unable to marshal Data: %v", err)
 				return "", nil
 			}
 			return `{
@@ -814,7 +814,7 @@ func BenchmarkEnum(b *testing.B) {
 			}
 			d, err := json.Marshal(data)
 			if err != nil {
-				b.Errorf("unable to marshal data: %v", err)
+				b.Errorf("unable to marshal Data: %v", err)
 				return "", nil
 			}
 			return `{
@@ -1013,7 +1013,7 @@ func runBenchmark(b *testing.B, dataFn func(sampleSize int) (string, interface{}
 		b.Run(fmt.Sprintf("sample size %v", sampleSize), func(b *testing.B) {
 			schema, data := dataFn(sampleSize)
 			if data == nil {
-				b.Skip("data == nil, skipping")
+				b.Skip("Data == nil, skipping")
 				return
 			}
 

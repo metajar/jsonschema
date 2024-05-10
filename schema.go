@@ -320,7 +320,7 @@ func (s *Schema) validateSchemakeywords(ctx context.Context, currentState *Valid
 }
 
 // ValidateBytes performs schema validation against a slice of json
-// byte data
+// byte Data
 func (s *Schema) ValidateBytes(ctx context.Context, data []byte) ([]KeyError, error) {
 	var doc interface{}
 	if err := json.Unmarshal(data, &doc); err != nil {
